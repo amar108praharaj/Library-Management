@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>Library Management System</h1>
+        <button id="themeToggle">DarkMode</button>
+    </header>
+
+    <main class="container">
+
+
+        <section class="student-section">
+            <h2>Add Student</h2>
+            <form id="studentForm">
+                <input type="text" id="studentName" placeholder="Student Name" required />
+                <input type="email" id="studentEmail" placeholder="Student Email" required />
+                <button type="submit">Add Student</button>
+            </form>
+
+            <label for="studentSelect">Select Student:</label>
+            <select id="studentSelect">
+                <option value="">-- Select Student --</option>
+            </select>
+        </section>
+
+
+        <section class="book-section">
+            <h2>Add Book</h2>
+            <form id="bookForm">
+                <input type="text" id="bookTitle" placeholder="Book Title" required />
+                <input type="text" id="bookAuthor" placeholder="Book Author" required />
+                <input type="text" id="bookISBN" placeholder="Book ISBN" required />
+                <button type="submit">Add Book</button>
+            </form>
+
+            <input type="text" id="searchBooks" placeholder="Search Books..." />
+        </section>
+
+
+        <section class="list-section">
+            <h2>Library Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Status</th>
+                        <th>Issued To</th>
+                        <th>Issue Date</th>
+                        <th>Duration (days)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookList"></tbody>
+            </table>
+            <button id="clearBooks">Clear All Books</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p id="footerText"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
